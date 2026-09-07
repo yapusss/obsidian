@@ -1,6 +1,9 @@
 # TODO
 
-- [ ] Beli RAM
-- [x] Setup Proxmox
-- [ ] Konfigurasi firewall
-- [ ] Baca jurnal baru
+> Daftar tugas belum selesai. Setiap baris mulai dengan `- [ ]`.
+> Selesai → `- [x]`. Otomatis terbaca oleh `/todo` (yang belum selesai saja).
+
+- [ ] Contoh: atur backup config server
+
+## Catatan kerja (selesai)
+- [x] Setup sinkronisasi vault ke GitHub
