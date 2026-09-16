@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Custom 3D Printing — Poster</title>
+<style>
+  :root{
+    --ink:#0b0e14;      /* near-black ground */
+    --panel:#12161f;
+    --line:#262d3b;
+    --accent:#ff7a18;   /* filament-orange accent */
+    --accent-2:#ffb46b;
+    --txt:#f3f5f8;
+    --mut:#9aa3b2;
+    --dim:#6b7484;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:"Inter","Segoe UI",system-ui,-apple-system,sans-serif;
+    background:var(--ink);color:var(--txt);
+    -webkit-font-smoothing:antialiased;
+  }
+  /* Fixed print canvas: A series / portrait ~ 1080 x 1350 */
+  .poster{
+    width:1080px;height:1350px;
+    position:relative;overflow:hidden;
+    background:radial-gradient(120% 90% at 85% -5%, #1a2332 0%, var(--ink) 55%);
+    display:flex;flex-direction:column;
+    padding:72px 64px 56px;
+  }
+
+  /* geometric texture */
+  .grid{
+    position:absolute;inset:0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:56px 56px;
+    opacity:.28;
+    -webkit-mask-image:radial-gradient(120% 100% at 60% 0%, #000 30%, transparent 78%);
+    mask-image:radial-gradient(120% 100% at 60% 0%, #000 30%, transparent 78%);
+    pointer-events:none;
+  }
+
+  .top{display:flex;align-items:center;gap:14px;margin-bottom:auto}
+  .badge{
+    font-size:24px;font-weight:800;letter-spacing:2.5px;
+    padding:10px 22px;border:2px solid var(--accent);border-radius:6px;
+    color:var(--accent-2);
+  }
+  .tagline{font-size:22px;color:var(--mut);letter-spacing:0.4px}
+
+  .mid{position:relative;z-index:2;padding:60px 0 70px}
+  .kicker{
+    font-size:26px;font-weight:700;letter-spacing:6px;color:var(--accent);
+    text-transform:uppercase;margin-bottom:26px;
+  }
+  h1{
+    font-size:112px;line-height:1.0;font-weight:900;letter-spacing:-2px;
+    max-width:15ch;
+  }
+  h1 .hl{color:var(--accent-2)}
+  .sub{
+    margin-top:34px;font-size:32px;line-height:1.45;color:var(--mut);
+    max-width:30ch;font-weight:400;
+  }
+
+  /* feature strip */
+  .strip{
+    position:relative;z-index:2;display:flex;gap:0;
+    border:1px solid var(--line);border-radius:12px;overflow:hidden;
+    background:rgba(18,22,31,.72);backdrop-filter:blur(4px);
+  }
+  .f{
+    flex:1;padding:28px 26px;border-right:1px solid var(--line);
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .f:last-child{border-right:none}
+  .f .n{font-size:20px;color:var(--accent-2);font-weight:800;letter-spacing:1px}
+  .f .t{font-size:25px;font-weight:700;line-height:1.25}
+  .f .d{font-size:21px;color:var(--dim);line-height:1.4}
+
+  .bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;position:relative;z-index:2}
+  .cta p{font-size:24px;color:var(--mut);margin-bottom:14px}
+  .handle{display:flex;align-items:center;gap:12px;font-size:36px;font-weight:800;color:var(--accent-2)}
+  .handle .at{color:var(--dim);font-weight:400}
+  .q{
+    font-size:20px;color:var(--dim);line-height:1.4;text-align:right;
+    max-width:26ch;
+  }
+  .q .price{font-size:30px;font-weight:800;color:var(--txt);display:block;margin-bottom:6px}
+  .q .from{font-size:20px;color:var(--dim)}
+</style>
+</head>
+<body>
+  <main class="poster">
+    <div class="grid"></div>
+
+    <div class="top">
+      <div class="badge">PRINTLAB</div>
+      <div class="tagline">Custom 3D Printing Studio</div>
+    </div>
+
+    <div class="mid">
+      <div class="kicker">Bring your idea to life</div>
+      <h1>Print it.<br><span class="hl">One piece.</span><br>Or a batch.</h1>
+      <p class="sub">Custom 3D printing for anything you can imagine — parts, prototypes, gifts &amp; merch. Single-piece orders welcome.</p>
+    </div>
+
+    <div class="strip">
+      <div class="f">
+        <div class="n">SINGLE PRINTS</div>
+        <div class="t">One-offs accepted</div>
+        <div class="d">No minimum order. One part, printed just for you.</div>
+      </div>
+      <div class="f">
+        <div class="n">MANY MATERIALS</div>
+        <div class="t">Filament &amp; resin</div>
+        <div class="d">PLA, PETG, and more — strong, clean, precise.</div>
+      </div>
+      <div class="f">
+        <div class="n">FAST &amp; LOCAL</div>
+        <div class="t">Quick turnaround</div>
+        <div class="d">Small jobs done fast, shipped or picked up.</div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="cta">
+        <p>Send your file, we handle the rest.</p>
+        <div class="handle">WhatsApp <span class="at">+62 812-0000-0000</span></div>
+      </div>
+      <div class="q">
+        <span class="price">From Rp15.000</span>
+        <span class="from">per single print · custom quote for batch &amp; complex parts</span>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
