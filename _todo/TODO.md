@@ -9,7 +9,7 @@
 - [x] debug outlet tidak tersimpan padahal sudah sukses
 - [ ] prosedur penarikan pengurus bem
 - [ ] revisi ppt etika profesi
-- [ ] menu baru ada 3
+- [x] menu baru ada 3
 
 ## Catatan kerja (selesai)
 - [x] Setup sinkronisasi vault ke GitHub
