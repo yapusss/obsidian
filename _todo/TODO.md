@@ -5,9 +5,9 @@
 
 - [x] Contoh: atur backup config server
 - [ ] Setup mitigasi mati listrik agar server otomatis menyala ketika listrik kembali (RTC wake / power-on-after-power-loss)
-- [ ] cari info ke adek tingkat
+- [x] cari info ke adek tingkat
 - [x] debug outlet tidak tersimpan padahal sudah sukses
-- [ ] prosedur penarikan pengurus bem
+- [x] prosedur penarikan pengurus bem
 - [ ] revisi ppt etika profesi
 - [x] menu baru ada 3
 
