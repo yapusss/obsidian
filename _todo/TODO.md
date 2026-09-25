@@ -8,7 +8,7 @@
 - [x] cari info ke adek tingkat
 - [x] debug outlet tidak tersimpan padahal sudah sukses
 - [x] prosedur penarikan pengurus bem
-- [ ] revisi ppt etika profesi
+- [x] revisi ppt etika profesi
 - [x] menu baru ada 3
 
 ## Catatan kerja (selesai)
